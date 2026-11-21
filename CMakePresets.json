@@ -1,0 +1,71 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "common",
+      "hidden": true,
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "lab1",
+      "displayName": "Lab 1 - Geometry",
+      "inherits": "common",
+      "binaryDir": "${sourceDir}/build/lab1",
+      "cacheVariables": {
+        "LAB_NUMBER": "1",
+        "LAB_ENABLE_SHADOWS": "OFF"
+      }
+    },
+    {
+      "name": "lab2",
+      "displayName": "Lab 2 - Lighting",
+      "inherits": "common",
+      "binaryDir": "${sourceDir}/build/lab2",
+      "cacheVariables": {
+        "LAB_NUMBER": "2",
+        "LAB_ENABLE_SHADOWS": "ON"
+      }
+    },
+    {
+      "name": "lab3",
+      "displayName": "Lab 3 - Textures",
+      "inherits": "common",
+      "binaryDir": "${sourceDir}/build/lab3",
+      "cacheVariables": {
+        "LAB_NUMBER": "3",
+        "LAB_ENABLE_SHADOWS": "ON"
+      }
+    },
+    {
+      "name": "lab4",
+      "displayName": "Lab 4 - Dynamic shadow mapping",
+      "inherits": "common",
+      "binaryDir": "${sourceDir}/build/lab4",
+      "cacheVariables": {
+        "LAB_NUMBER": "4",
+        "LAB_ENABLE_SHADOWS": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "lab1",
+      "configurePreset": "lab1"
+    },
+    {
+      "name": "lab2",
+      "configurePreset": "lab2"
+    },
+    {
+      "name": "lab3",
+      "configurePreset": "lab3"
+    },
+    {
+      "name": "lab4",
+      "configurePreset": "lab4"
+    }
+  ]
+}
